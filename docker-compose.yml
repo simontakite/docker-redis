@@ -1,5 +1,5 @@
 Redis:
-  image: absolootly/redis:latest
+  image: absolootly/docker-redis:latest
   ports:
     - "6379:6379"
   volumes:
