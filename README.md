@@ -1,4 +1,4 @@
-# About absolootly/redis
+# About absolootly/docker-redis
 
 - [Introduction](#introduction)
 - [Getting started](#getting-started)
@@ -22,16 +22,16 @@ Redis is an open source, BSD licensed, advanced key-value cache and store. It is
 
 ## Installation
 
-Automated builds of the image are available on [Dockerhub](https://hub.docker.com/r/absolootly/redis) and is the recommended method of installation.
+Automated builds of the image are available on [Dockerhub](https://hub.docker.com/r/absolootly/docker-redis) and is the recommended method of installation.
 
 ```bash
-docker pull absolootly/redis:latest
+docker pull absolootly/docker-redis:latest
 ```
 
 Alternatively you can build the image yourself.
 
 ```bash
-docker build -t absolootly/redis github.com/absolootly/docker-redis
+docker build -t absolootly/docker-redis github.com/simontakite/docker-redis
 ```
 
 ## Quickstart
@@ -42,7 +42,7 @@ Start Redis using:
 docker run --name redis -d --restart=always \
   --publish 6379:6379 \
   --volume /srv/docker/redis:/var/lib/redis \
-  absolootly/redis:latest
+  absolootly/docker-redis:latest
 ```
 
 *Alternatively, you can use the sample [docker-compose.yml](docker-compose.yml) file to start the container using [Docker Compose](https://docs.docker.com/compose/)*
@@ -55,7 +55,7 @@ You can customize the launch command of Redis server by specifying arguments to 
 docker run --name redis -d --restart=always \
   --publish 6379:6379 \
   --volume /srv/docker/redis:/var/lib/redis \
-  absolootly/redis:latest --appendonly yes
+  absolootly/docker-redis:latest --appendonly yes
 ```
 
 Please refer to http://redis.io/topics/config for further details.
@@ -82,7 +82,7 @@ docker run --name redis -d --restart=always \
   --publish 6379:6379 \
   --env 'REDIS_PASSWORD=redispassword' \
   --volume /srv/docker/redis:/var/lib/redis \
-  absolootly/redis:latest
+  absolootly/docker-redis:latest
 ```
 
 Clients connecting to the Redis server will now have to authenticate themselves with the password `redispassword`.
@@ -97,7 +97,7 @@ By default the Redis server logs are sent to the standard output. Using the [Com
 docker run --name redis -d --restart=always \
   --publish 6379:6379 \
   --volume /srv/docker/redis:/var/lib/redis \
-  absolootly/redis:latest --logfile /var/log/redis/redis-server.log
+  absolootly/docker-redis:latest --logfile /var/log/redis/redis-server.log
 ```
 
 To access the Redis logs you can use `docker exec`. For example:
@@ -115,7 +115,7 @@ To upgrade to newer releases:
   1. Download the updated Docker image:
 
   ```bash
-  docker pull absolootly/redis:latest
+  docker pull absolootly/docker-redis:latest
   ```
 
   2. Stop the currently running image:
@@ -135,7 +135,7 @@ To upgrade to newer releases:
   ```bash
   docker run --name redis -d \
     [OPTIONS] \
-    absolootly/redis:latest
+    absolootly/docker-redis:latest
   ```
 
 ## Shell Access
