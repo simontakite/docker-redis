@@ -1,3 +1,5 @@
+[![](https://badge.imagelayers.io/absolootly/docker-redis:latest.svg)](https://imagelayers.io/?images=absolootly/docker-redis:latest 'Get your own badge on imagelayers.io')
+
 # About absolootly/docker-redis
 
 - [Introduction](#introduction)
