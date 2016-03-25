@@ -1,4 +1,4 @@
 all: build
 
 build:
-	@docker build --tag=sameersbn/redis .
+	@docker build --tag=absolootly/docker-redis .
