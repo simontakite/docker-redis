@@ -1,4 +1,5 @@
 #!/bin/bash
+# verbosity
 set -e
 
 REDIS_PASSWORD=${REDIS_PASSWORD:-}
